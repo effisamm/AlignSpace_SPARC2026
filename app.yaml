@@ -1,15 +1,15 @@
 name: alignspace
 services:
   - name: frontend
-    source_dir: frontend
-    dockerfile_path: frontend/Dockerfile
+    source_dir: as-ai-web
+    dockerfile_path: as-ai-web/Dockerfile
     http_port: 80
     health_check:
       http_path: /
 
   - name: backend
-    source_dir: backend
-    dockerfile_path: backend/Dockerfile
+    source_dir: as-ai-server
+    dockerfile_path: as-ai-server/Dockerfile
     http_port: 8000
     health_check:
       http_path: /health   # make sure your backend has this route
